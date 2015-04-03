@@ -1,15 +1,29 @@
-import pygame, time
-import data.txt
+from graphics import *
+from random import randint
+
+window = GraphWin("DataVis", 500, 500)
+
+dataFile = open("data.txt", 'r')
 
 
-pygame.display.init()
-
-canvas = pygame.display.set_mode((320,240))
-
-redish = (255, 50, 50)
-bounds = pygame.Rect(100, 100, 50, 30)
-
-pygame.draw.rect(canvas, redish, bounds, 2)
-
-pygame.display.update()
-
+while True:
+    for line in dataFile:
+        print(line)
+        
+        circle = line
+        val = float(circle)
+        
+        
+        posX = randint(500,500)
+        posY = randint(500,500)
+        
+        ball = Circle(Point(posX,posY), 50)
+        
+        
+        ball.setfill(color_rgb(255,255,255))
+        ball.draw(window)
+        
+        
+    
+window.getmouse()
+close()
