@@ -5,25 +5,32 @@ window = GraphWin("DataVis", 500, 500)
 
 dataFile = open("data.txt", 'r')
 
+def main():
+    window.getMouse()
+    window.close()
 
-while True:
-    for line in dataFile:
-        print(line)
-        
-        circle = line
-        val = float(circle)
-        
-        
-        posX = randint(500,500)
-        posY = randint(500,500)
-        
-        ball = Circle(Point(posX,posY), 50)
-        
-        
-        ball.setfill(color_rgb(255,255,255))
-        ball.draw(window)
-        
-        
-    
-window.getmouse()
-close()
+def dataVis():
+    while True:
+        for line in dataFile:
+            print(line)
+
+            circle = line
+            val = float(circle)
+
+            posX = randint(0,500)
+            posY = randint(0,500)
+
+            r = randint(0,255)
+            g = randint(0,255)
+            b = randint(0,255)
+
+            ball = Circle(Point(posX,posY), val)
+
+            ball.setFill(color_rgb(r,g,b))
+            ball.draw(window)
+            
+        else:
+            return
+
+dataVis()
+main()
