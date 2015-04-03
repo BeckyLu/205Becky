@@ -5,7 +5,6 @@ cursor = google.cursor()
 cursor = google.cursor()
 cursor.execute("SELECT * FROM urls")
 rows = cursor.fetchall()
-#data = " "
 for line in rows :
     global data 
     data = line[1]
