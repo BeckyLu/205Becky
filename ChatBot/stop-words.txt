@@ -83,7 +83,10 @@ more
 most
 mustn't
 my
+My
 myself
+name
+Name
 no
 nor
 not
@@ -173,4 +176,8 @@ your
 yours
 yourself
 yourselves
-HihiI'mimi'm
+Hi
+hi
+I'm
+im
+i'm
