@@ -20,13 +20,13 @@ def dataVis():
             posX = randint(0,500)
             posY = randint(0,500)
 
-            r = randint(0,255)
-            g = randint(0,255)
-            b = randint(0,255)
+            #r = randint(0,255)
+            #g = randint(0,255)
+            #b = randint(0,255)
 
             ball = Circle(Point(posX,posY), val)
 
-            ball.setFill(color_rgb(r,g,b))
+            ball.setFill(color_rgb(val,val,val))
             ball.draw(window)
             
         else:
