@@ -1,5 +1,17 @@
 import twitter, datetime
+google = sqlite3.connect(
+cursor = google.cursor()
 
+google = sqlite3.connect("C:\Users\Robert\AppData\Local\Google\Chrome\User Data\Default\History")
+
+cursor = google.cursor()
+cursor.execute("SELECT * FROM urls")
+rows = cursor.fetchall()
+data = " "
+for line in rows :
+    global data 
+    data = line[1]
+print data
 
 user = 1898676804
 
@@ -19,7 +31,7 @@ print api.VerifyCredentials()
 
 statuses = api.GetUserTimeline(user)
 
-timestamp = datetime.datetime.utcnow
+timestamp = datetime.datetime.utcnow()
 
 response = api.PostUpdate("This is being Tweeted from a python sketch. Tweeted at " + str(timestamp))
 
