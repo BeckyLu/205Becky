@@ -23,7 +23,7 @@ while True:
     #print inputString         #Debugging
     
     print("Hello there " + filtered + "How're you today?")
-else:
+#else:
     
     
     
